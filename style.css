@@ -1,0 +1,338 @@
+/* ---- TABLE OF CONTENTS ---- 
+1. IMPORTS
+2. RESETS
+3. GLOBAL STYLES
+    3.1 Typography
+    3.2 Colors
+4. COMPONENTS
+5. STYLESHEET
+------------------------------ */
+
+
+/* ---- 1. IMPORTS ---- */
+
+/* Lato Typeface */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+
+/* ---- 2.RESETS ----- */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.4rem;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+    margin: 0;
+}
+
+html {
+    color-scheme: dark light;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+/* ---- 3. GLOBAL STYLES ---- */
+
+/* ---- 3.1 Typography - Lato */
+
+.head_type {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.sub-head_type {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.body_type1 {
+    font-size: 1.2rem;
+    line-height: 140%;
+    font-weight: 800;
+}
+
+.body_type2 {
+    font-size: 1rem;
+    line-height: 140%;
+    font-weight: 600;
+}
+
+/* ---- 3.2 Colors */
+
+.primary_blue {
+    color: #3A0CA3;
+}
+
+.primary_gray {
+    color: #696260;
+}
+
+.primary_darkblue {
+    color: #04010A;
+}
+
+.primary_pink {
+    color: #F72585;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+/* ---- 4. COMPONENTS ---- */
+
+hr {
+    display: flex;
+    justify-items: center;
+    opacity: .5;
+    width: 90vw;
+    margin: auto;
+}
+
+.under {
+    text-decoration: underline;
+}
+
+/* ---- END OF GLOBAL STYLES ---- */
+
+/* ---- 5. STYLESHEET ---- */
+
+/* START OF NAVIGATION BAR */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    min-width: 150px;
+    margin-right: .5em;
+}
+
+.main-navigation {
+    margin: 1em 6em 1em 6em;
+    padding: .5em 0;
+}
+
+ul {
+    list-style: none;
+}
+
+li > a {
+    text-decoration: none;
+    padding: 1em;
+    font-weight: 600;
+}
+
+.nav-items {
+    display: flex;
+    margin-left: auto;
+}
+/* END OF NAVIGATION BAR */
+
+/* START OF HERO SECTION */
+
+section {
+    margin: 0 6em;
+    padding: 5em 0;
+}
+
+h1 > strong {
+    color: #F72585;
+}
+
+p {
+    padding: 1.25em 0;
+}
+
+/* END OF HERO SECTION */
+
+/* BEGINNING OF GALLERY SECTION */
+
+.gallery {
+    display: flex;
+    min-height: auto;
+}
+
+/* END OF GALLERY SECTION */
+
+/* BEGINNING OF SERVICE SECTION */
+
+.service {
+    display: flex;
+    padding: 6em;
+    justify-content: space-around;
+}
+
+.column {
+    display: flex;
+    align-items: flex-start;
+    /* gap: 4em; */
+}
+
+.column .col-col {
+    margin: auto;
+    padding: 2em;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.col-col > h1 {
+    color: #3A0CA3
+}
+
+.col-col ul > li {
+    color: #696260;
+}
+
+/* END OF SERVICE SECTION */
+
+/* BEGINNING OF FOOTER SECTION */
+
+footer {
+    display: flex;
+    background-color: #3A0CA3;
+    padding: 2em 6em;
+    justify-content: space-between;
+    color: #FFFFFF;
+}
+
+.social-icons {
+    display: flex;
+    gap: .5em;
+}
+
+footer > h1 {
+    font-weight: 800;
+}
+
+.phone > a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.mail > a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+/* END OF FOOTER SECTION */
+
+/* MEDIA QUERIES */
+
+/* SCREENS LESS THAN 778PX */
+@media (width <= 778px) {
+    
+    .rich-text {
+        font-size: 2rem;
+    }
+
+    .rich-text p {
+        font-size: 1.2rem;
+    }
+
+    .service {
+        padding: 3em 5em;
+    }
+
+    footer {
+        padding: 2em 5em;
+    }
+
+}
+
+/* SCREENS LESS THAN 690PX */
+@media (width < 690px) {
+
+    hr {
+        width: 75vw;
+    }
+
+    .main-navigation {
+        display: block;
+        width: fit-content;
+        margin: 1em 4em;
+    }
+
+    .logo {
+       margin: 0 auto;
+       width: fit-content;
+    }
+
+    .nav-items {
+        padding-top: 1.5em;
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    .gallery {
+        width: 100vw;
+    }
+
+}
+
+/* SCREENS LESS THAN 627PX */
+@media (width < 627px) {
+    section {
+        margin: 0 3em;
+        padding: 2em 0;
+    }
+}
+
+/* SCREENS LESS THAN 599PX */
+@media (width < 599px) {
+    .gallery {
+        width: 100vw;
+        display: block;
+    }
+
+    .service {
+        display: block;
+        padding: 1.5em 3em;
+
+    }
+
+    footer {
+        display: block;
+    }
+
+    footer, .phone, .mail, .socials {
+        margin-top: 1em;
+    }
+}
+
+/* SCREENS LESS THAN 320PX */
+@media (width < 320) {
+    .main-navigation {
+        margin: auto;
+    }
+    .service {
+        padding: .75em;
+    }
+    .col-col ul > li {
+        font-size: .25em;
+    }
+    .col-col > h1 {
+        font-size: .75em;
+    }
+    .col-col {
+        padding: 1em;
+    }
+
+}
